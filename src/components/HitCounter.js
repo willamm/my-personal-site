@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { siteMetadata } from '../../gatsby-config';
 
 const HitCounter = ({ slug }) => {
 
@@ -11,10 +10,7 @@ const HitCounter = ({ slug }) => {
         if (process.env.NODE_ENV !== 'production') {
             return;
         }
-
         const url = "https://api.williamm.me/v1/count"
-        //const formData = new FormData();
-        //formData.append('slug', slug);
         const options = {
             method: "POST",
             headers: {
@@ -31,9 +27,7 @@ const HitCounter = ({ slug }) => {
                 return res.json()
             })
             .then((data) => {
-                //if (typeof hits === 'number') {
-                    setHits(data);
-               // }
+                setHits(data);
             })
             .catch((error) => {
                 console.error("Error in fetch request:" + error)

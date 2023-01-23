@@ -51,38 +51,7 @@ const links = [
   },
 ]
 
-const IndexPage = ({data}) => {
-
-  //const [visitCount, setVisitCount] = useState([]);
-  //const [isLoading, setIsLoading] = useState(false);
-
-  //const loadDataOnlyOnce = () => {
-    //const url = "https://api.williamm.me/v1/count"
-    //const options = {
-      //method: "POST"
-    //}
-
-    //const fetchData = async () => {
-      //setIsLoading(true);
-      //try {
-        //const response = await fetch(url, options)
-        //if (!response.ok) {
-          //throw new Error("Network response was not OK.")
-        //}
-        //const data = await response.json()
-        //setIsLoading(false)
-        //setVisitCount(data)
-      //} catch (error) {
-        //console.error("There has been a problem fetching data from the server: ", error)
-      //}
-    //}
-
-    //fetchData();
-  //};
-
-  //useEffect(() => {
-    //loadDataOnlyOnce()
-  //}, []);
+const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <p>I'm making this by following the Gatsby Tutorial</p>
