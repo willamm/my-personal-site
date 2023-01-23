@@ -1,10 +1,13 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+const siteAddress = new URL("https://www.williamm.me");
+
 module.exports = {
   siteMetadata: {
     title: `My Personal Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: siteAddress.href
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
@@ -25,5 +28,13 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  },
+  {
+    resolve: 'gatsby-plugin-s3',
+    options: {
+      bucketName: "williamm.me",
+      protocol: siteAddress.protocol.slice(0, -1),
+      hostname: siteAddress.hostname
+    }
   }]
 };
