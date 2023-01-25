@@ -90,4 +90,4 @@ jobs:
           role-session-name: "github-deploy-s3"
           aws-region: ${{ env.AWS_REGION }}
       - name: Deploy to Amazon S3
-        run: ${{ steps.detect-package-manager.outputs.manager }} run deploy
+        run: npm run deploy
