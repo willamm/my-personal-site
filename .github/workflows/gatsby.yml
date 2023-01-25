@@ -80,7 +80,7 @@ jobs:
           AWS_REGION: "us-east-1"
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: "arn:aws:iam::102317976783:role/github"
+          role-to-assume: "arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github"
           role-session-name: "github-deploy-s3"
           aws-region: ${{ env.AWS_REGION }}
       - name: Deploy to Amazon S3
