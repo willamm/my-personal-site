@@ -76,6 +76,8 @@ jobs:
       #    path: ./public
       #    name: "prod-build"
       - name: Configure AWS credentials
+        env:
+          AWS_REGION: "us-east-1"
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: "arn:aws:iam::102317976783:role/github"
