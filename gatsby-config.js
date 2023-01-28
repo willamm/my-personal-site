@@ -34,7 +34,8 @@ module.exports = {
     options: {
       bucketName: "williamm.me",
       protocol: siteAddress.protocol.slice(0, -1),
-      hostname: siteAddress.hostname
+      hostname: siteAddress.hostname,
+      acl: null
     }
   }]
 };
