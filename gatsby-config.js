@@ -7,7 +7,9 @@ const siteAddress = new URL("https://www.williamm.me");
 module.exports = {
   siteMetadata: {
     title: `My Personal Site`,
-    siteUrl: siteAddress.href
+    author: "William Murphy",
+    description: "Personal website",
+    siteURL: siteAddress.href
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
