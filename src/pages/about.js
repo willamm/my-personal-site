@@ -7,7 +7,6 @@ import useSiteMetadata from '../hooks/useSiteMetadata';
 export const Head = () => <title>About Me</title>
 
 const AboutPage = ({location}) => {
-    const { siteURL } = useSiteMetadata();
     return (
         <Layout pageTitle="About">
             <p>This is the About Me page</p>
