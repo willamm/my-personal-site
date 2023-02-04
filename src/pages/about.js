@@ -1,15 +1,17 @@
 import * as React from 'react';
 import HitCounter from '../components/HitCounter';
 import Layout from '../components/layout'
+import useSiteMetadata from '../hooks/useSiteMetadata';
 
 
 export const Head = () => <title>About Me</title>
 
-const AboutPage = () => {
+const AboutPage = ({location}) => {
+    const { siteURL } = useSiteMetadata();
     return (
         <Layout pageTitle="About">
             <p>This is the About Me page</p>
-            <HitCounter slug="/about"></HitCounter>
+            <HitCounter slug={location.pathname}></HitCounter>
         </Layout>
     )
 }
