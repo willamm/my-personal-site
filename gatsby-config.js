@@ -9,7 +9,7 @@ module.exports = {
     title: `My Personal Site`,
     author: "William Murphy",
     description: "Personal website",
-    siteUrl: siteAddress.href
+    siteURL: siteAddress.href
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
