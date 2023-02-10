@@ -8,7 +8,7 @@ const useSiteMetadata = () => {
                     title
                     description
                     author
-                    siteUrl
+                    siteURL
                 }
             }
         }`);
