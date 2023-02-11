@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {hitContainer} from './hitcounter.module.css';
 
 const HitCounter = ({ slug }) => {
 
@@ -39,7 +40,7 @@ const HitCounter = ({ slug }) => {
     }
 
     return (
-        <p>{hits}</p>
+        <p className={hitContainer}>{hits}</p>
     )
 }
 

@@ -8,7 +8,8 @@ import HitCounter from "../components/HitCounter"
 const IndexPage = ({location}) => {
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial</p>
+      <p>I'm making this by following the Gatsby Tutorial. Zero progress.</p>
+      
       <HitCounter slug={location.pathname} />
     </Layout>
   )
