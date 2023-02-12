@@ -4,12 +4,13 @@ import * as React from "react"
 import { useEffect, useState } from "react"
 import { useCallback } from "react"
 import HitCounter from "../components/HitCounter"
+import {heading} from "../components/layout.module.css"
+import JSONbuildtime from "./json-at-buildtime"
 
 const IndexPage = ({location}) => {
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial. Zero progress.</p>
-      
+      <JSONbuildtime></JSONbuildtime>
       <HitCounter slug={location.pathname} />
     </Layout>
   )
