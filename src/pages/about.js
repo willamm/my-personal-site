@@ -12,6 +12,7 @@ const AboutPage = ({location}) => {
         <Layout pageTitle="About">
             <p>This is the About Me page</p>
             <JSONbuildtime></JSONbuildtime>
+            <JSONbuildtime></JSONbuildtime>
             <HitCounter slug={location.pathname}></HitCounter>
         </Layout>
     )
