@@ -1,7 +1,10 @@
 .container {
+    display: grid;
     margin: auto;
-    max-width: 500px;
+    max-width: 600px;
     font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
 }
 
 .heading {
@@ -12,6 +15,8 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-link-item {
