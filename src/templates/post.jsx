@@ -8,12 +8,12 @@ const shortcodes = { Link } // Provide common components here
 
 export default function PageTemplate({ data, children, location }) {
   return (
-    <Layout>
-      <h1>{data.mdx.frontmatter.title}</h1>
+    <Layout pageTitle={data.mdx.frontmatter.title}>
+      <p>{data.mdx.frontmatter.slug}</p>
       <MDXProvider components={shortcodes}>
         {children}
       </MDXProvider>
-      <HitCounter slug={location.pathname + data.mdx.frontmatter.slug + '/'} />
+      <HitCounter slug={data.mdx.frontmatter.slug} />
     </Layout>
   )
 }
@@ -23,6 +23,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        slug
       }
     }
   }
