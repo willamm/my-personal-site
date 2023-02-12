@@ -6,14 +6,14 @@ import Layout from "../components/layout"
 import HitCounter from "../components/HitCounter"
 const shortcodes = { Link } // Provide common components here
 
-export default function PageTemplate({ data, children }) {
+export default function PageTemplate({ data, children, location }) {
   return (
     <Layout>
       <h1>{data.mdx.frontmatter.title}</h1>
       <MDXProvider components={shortcodes}>
         {children}
       </MDXProvider>
-      <HitCounter slug={data.mdx.frontmatter.slug + '/'} />
+      <HitCounter slug={location.pathname + data.mdx.frontmatter.slug + '/'} />
     </Layout>
   )
 }
