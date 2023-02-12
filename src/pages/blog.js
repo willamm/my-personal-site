@@ -8,7 +8,6 @@ const BlogPage = ({location}) => {
     return (
         <Layout pageTitle="Blog">
             <p>This is the blog page. Blog posts go here.</p>
-            <p>test</p>
             <HitCounter slug={location.pathname} />
         </Layout>
     )
