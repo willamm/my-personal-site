@@ -13,7 +13,7 @@ export default function PageTemplate({ data, children }) {
       <MDXProvider components={shortcodes}>
         {children}
       </MDXProvider>
-      <HitCounter slug={data.mdx.frontmatter.slug} />
+      <HitCounter slug={data.mdx.frontmatter.slug + '/'} />
     </Layout>
   )
 }
