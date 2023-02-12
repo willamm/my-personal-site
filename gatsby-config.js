@@ -32,12 +32,20 @@ module.exports = {
     __key: "pages"
   },
   {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: "posts",
+      path: "./src/content/posts",
+    },
+  },
+  {
     resolve: 'gatsby-plugin-s3',
     options: {
       bucketName: "williamm.me",
       protocol: siteAddress.protocol.slice(0, -1),
       hostname: siteAddress.hostname, 
       acl: null
-    }
-  }]
+    },
+  },
+  ]
 };
