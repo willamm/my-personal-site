@@ -1,4 +1,4 @@
-# Sample workflow for building and deploying a Gatsby site to GitHub Pages
+# Sample workflow for building and deploying a Gatsby site to AWS S3.
 #
 # To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
 #
@@ -73,7 +73,7 @@ jobs:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           path: ./public
           name: prod-build
@@ -87,8 +87,9 @@ jobs:
     needs: build
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4
         with: 
+          path: prod-build
           name: prod-build
       - name: Configure AWS credentials
         env:
