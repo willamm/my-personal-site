@@ -6,9 +6,9 @@ import useSiteMetadata from '../hooks/useSiteMetadata';
 
 export const Head = () => <title>About Me</title>
 
-const AboutPage = ({location}) => {
+    const AboutPage = ({location}) => {
     return (
-        <Layout pageTitle="About">
+        <Layout pageTitle="About" location={location}>
             <p>This is the About Me page</p>
             <HitCounter slug={location.pathname}></HitCounter>
         </Layout>
